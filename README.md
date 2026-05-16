@@ -17,17 +17,5 @@ npm run dev
 
 # 3. Build for production
 npm run build
-```
 
-## Sections
-| Section | Description |
-|---------|-------------|
-| Hero | Full-screen landing with CTA buttons |
-| About | Bio, avatar, skill badges |
-| Projects | 4 project cards with hover effects |
-| Contact | Contact form + social links |
 
-## Customisation
-- Edit `src/App.jsx` — update name, bio, `PROJECTS` array, social links
-- Edit `src/index.css` — change fonts or colour variables
-- Edit `tailwind.config.js` — extend theme as needed
