@@ -502,7 +502,7 @@ function Contact() {
 
   const socials = [
     {
-      label: "Email", value: "alex@mercer.dev", href: "mailto:alex@mercer.dev",
+      label: "Email", value: "jenaritesh1@gmail.com", href: "mailto:jenaritesh1@gmail.com",
       icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
     },
     { label: "GitHub", value: `github.com/${GITHUB_USERNAME}`, href: GITHUB_URL, icon: <GithubIcon /> },
@@ -517,7 +517,7 @@ function Contact() {
     <section id="contact" className={`py-32 px-6 transition-colors duration-500 ${th.bgAlt}`}>
       <div className="max-w-6xl mx-auto">
         <div ref={ref} className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <p className="font-mono text-cyan-500 text-xs tracking-[0.3em] uppercase mb-4">03 // Contact</p>
+          <p className="font-mono text-cyan-500 text-xs tracking-[0.3em] uppercase mb-4">Contact</p>
           <h2 className={`font-display text-4xl md:text-5xl font-black mb-4 ${th.text}`}>Let's build<br />something great.</h2>
           <p className={`mb-12 max-w-md ${th.textMuted}`}>Have a project in mind or just want to chat? My inbox is always open.</p>
 
