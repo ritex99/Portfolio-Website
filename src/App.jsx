@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef, createContext, useContext } from "react";
+import profilePic from "./Facetune_11-07-2026-02-25-35.jpeg";
 
 const GITHUB_USERNAME = "ritex99";
 const LINKEDIN_URL    = " https://www.linkedin.com/in/jena-ritesh";
-const GITHUB_URL      = `https://github.com/${GITHUB_USERNAME}`;
+const GITHUB_URL      = `https://github.com/ritex99`;
 
 const ThemeCtx = createContext({ dark: true, toggle: () => {} });
 
@@ -246,20 +247,8 @@ function About() {
       <div className="max-w-6xl mx-auto">
         <div ref={ref} className={`grid md:grid-cols-2 gap-16 items-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
           <div className="relative">
-            <div className={`w-full aspect-square max-w-sm mx-auto rounded-sm overflow-hidden border ${th.border} relative transition-colors duration-500 ${th.dark ? "bg-slate-900" : "bg-slate-100"}`}>
-              <svg viewBox="0 0 400 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <radialGradient id="ag" cx="50%" cy="40%" r="60%">
-                    <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.05" />
-                  </radialGradient>
-                </defs>
-                <rect width="400" height="400" fill={th.dark ? "#0c1020" : "#f1f5f9"} />
-                <rect width="400" height="400" fill="url(#ag)" />
-                <ellipse cx="200" cy="155" rx="60" ry="60" fill={th.dark ? "#1e293b" : "#cbd5e1"} />
-                <path d="M100 380 Q200 260 300 380 Z" fill={th.dark ? "#1e293b" : "#cbd5e1"} />
-                <circle cx="200" cy="155" r="65" fill="none" stroke="#22d3ee" strokeWidth="1.5" strokeOpacity="0.4" />
-              </svg>
+            <div className={`w-full aspect-[4/6] max-w-sm mx-auto rounded-sm overflow-hidden border ${th.border} relative transition-colors duration-500 ${th.dark ? "bg-slate-900" : "bg-slate-100"}`}>
+              <img src={profilePic} alt="Profile" className="w-full h-full object-contain" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-cyan-400/40" />
             <div className="absolute -top-4 -left-4 w-24 h-24 border-l-2 border-t-2 border-violet-400/40" />
@@ -271,10 +260,10 @@ function About() {
               Building things<br />that matter.
             </h2>
             <p className={`leading-relaxed mb-4 ${th.textMuted}`}>
-              I'm a full-stack developer with 5+ years of experience turning complex problems into clean, intuitive products. I believe great software lives at the intersection of rigorous engineering and intentional design.
+              Currently pursuing my Master's in Computer Applications. I believe great software lives at the intersection of rigorous engineering and intentional design. I enjoy building modern web applications.
             </p>
             <p className={`leading-relaxed mb-8 ${th.textMuted}`}>
-              When I'm not pushing pixels or wrangling APIs, you'll find me contributing to open source, sketching UI concepts, or chasing the perfect cup of filter coffee.
+              Every project is an opportunity to learn, improve, and build something that people genuinely enjoy using.
             </p>
             <div>
               <p className={`font-mono text-xs tracking-widest uppercase mb-4 ${th.dark ? "text-slate-500" : "text-slate-400"}`}>Tech Stack</p>
@@ -506,7 +495,7 @@ function Contact() {
       icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
     },
     { label: "GitHub", value: `github.com/${GITHUB_USERNAME}`, href: GITHUB_URL, icon: <GithubIcon /> },
-    { label: "LinkedIn", value: "linkedin.com/in/alexmercer", href: LINKEDIN_URL, icon: <LinkedInIcon /> },
+    { label: "LinkedIn", value: "https://www.linkedin.com/in/jena-ritesh", href: LINKEDIN_URL, icon: <LinkedInIcon /> },
     {
       label: "Twitter / X", value: "@ritesh_jena09", href: "https://x.com/ritesh_jena09?s=21",
       icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>,
