@@ -11,41 +11,41 @@ const NAV_LINKS = ["About", "Projects", "Contact"];
 
 const PROJECTS = [
   {
-    title: "Neural Canvas",
-    tag: "AI / Creative",
-    desc: "A generative art platform leveraging diffusion models to produce unique visual pieces on demand.",
-    tech: ["Python", "React", "WebGL"],
-    color: "from-violet-500 to-fuchsia-500",
-    github: `https://github.com/${GITHUB_USERNAME}/neural-canvas`,
-    live: "https://neural-canvas.vercel.app",
-  },
-  {
-    title: "FlowDesk",
-    tag: "Productivity",
-    desc: "Keyboard-first task manager with nested contexts, time blocking, and focus mode built for deep work.",
-    tech: ["TypeScript", "Electron", "SQLite"],
-    color: "from-cyan-500 to-blue-500",
-    github: `https://github.com/${GITHUB_USERNAME}/flowdesk`,
-    live: "https://flowdesk.app",
-  },
-  {
-    title: "Terrae",
-    tag: "Data Viz",
-    desc: "Interactive globe mapping real-time climate data — temperature anomalies, sea-level shifts, CO₂ concentration.",
-    tech: ["D3.js", "Three.js", "Node"],
-    color: "from-emerald-400 to-teal-600",
-    github: `https://github.com/${GITHUB_USERNAME}/terrae`,
-    live: "https://terrae.vercel.app",
-  },
-  {
-    title: "Sonique",
-    tag: "Music Tech",
-    desc: "Browser-based DAW with AI-assisted chord progression and melody generation for bedroom producers.",
-    tech: ["Web Audio API", "TensorFlow.js", "Svelte"],
+    title: "Interactive Quiz",
+    tag: "Education",
+    desc: "Built a dynamic quiz application with React. Implemented complex state management, real-time feedback mechanisms, and smooth transitions using Framer Motion for an optimal user experience.",
+    tech: ["React", "Framer Motion", "Lucide"],
     color: "from-amber-400 to-orange-500",
-    github: `https://github.com/${GITHUB_USERNAME}/sonique`,
-    live: "https://sonique.io",
+    github: "https://github.com/ritex99/Interactive-Quiz",
+    live: "https://quiz-app.vercel.app",
   },
+  {
+    title: "Weather App",
+    tag: "Utility",
+    desc: "Created a real-time weather tracking application utilizing React and Vite. Integrated external REST APIs to fetch and display accurate weather data within a clean, mobile-first interface.",
+    tech: ["React", "Vite", "REST APIs"],
+    color: "from-sky-400 to-indigo-500",
+    github: "https://github.com/ritex99/Weather-app",
+    live: "https://weather-app.vercel.app",
+  },
+  {
+    title: "AI Image Gallery",
+    tag: "AI / Gallery",
+    desc: "Developed an AI-powered image gallery leveraging React, Tailwind CSS, and Google GenAI. Designed to seamlessly generate and display dynamic visual content with a highly responsive UI.",
+    tech: ["React", "Google GenAI", "Tailwind"],
+    color: "from-cyan-500 to-blue-500",
+    github: "https://github.com/ritex99/Image-Gallery",
+    live: "https://image-gallery.vercel.app",
+  },
+  {
+    title: "NexaStudio",
+    tag: "Landing Page",
+    desc: "Engineered a high-performance landing page using React and Framer Motion. Focused on delivering an engaging user experience through fluid animations and modern, responsive aesthetics.",
+    tech: ["React", "Framer Motion", "Vite"],
+    color: "from-emerald-400 to-teal-600",
+    github: "https://github.com/ritex99/NexaStudio",
+    live: "https://nexastudio.vercel.app",
+  }
 ];
 
 // ── Shared SVGs ───────────────────────────────────────────────────────────────
@@ -315,7 +315,7 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        {/* GitHub + Live buttons */}
+        {/* GitHub button */}
         <div className={`flex gap-3 pt-4 border-t mt-auto ${th.border}`}>
           <a
             href={project.github}
@@ -326,15 +326,6 @@ function ProjectCard({ project, index }) {
           >
             <GithubIcon className="w-3.5 h-3.5" />
             Code
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-sm bg-cyan-500 text-white font-mono text-xs uppercase tracking-widest hover:bg-cyan-400 active:scale-95 transition-all duration-200 cursor-pointer shadow-md shadow-cyan-500/20"
-          >
-            <ExternalIcon className="w-3.5 h-3.5" />
-            Live
           </a>
         </div>
       </div>
